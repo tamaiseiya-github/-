@@ -1,0 +1,27 @@
+%h1
+  こんにちは、#{current_user.username}さん
+%p ユーザー用ページです。
+
+.header
+  .header__logo
+    勤怠管理
+.contents
+  .contents__message
+    勤怠打刻の種類を選んでタップ
+  -# .contents__btn
+  = link_to '', class: "contents__btn contents__btn--shuppatu" do
+    出発
+  -# .contents__btn
+  = link_to "", class: "contents__btn contents__btn--syukkinn" do
+    出勤
+  -# .contents__btn
+  = link_to "", class: "contents__btn contents__btn--taikinn" do
+    退勤
+
+
+
+%p#RealtimeClockArea1 ※ここに時計が表示されます。
+%p#RealtimeClockArea2 ※ここに時計が表示されます。
+%p#RealtimeClockArea3 ※ここに時計が表示されます。
+
+= link_to 'Home', root_path
